@@ -204,6 +204,7 @@ enum Tickers : uint32_t {
   COMPACT_READ_BYTES,   // Bytes read during compaction
   COMPACT_WRITE_BYTES,  // Bytes written during compaction
   FLUSH_WRITE_BYTES,    // Bytes written during flush
+  EXPER_FLUSH_COUNT,
 
   // Number of table's properties loaded directly from file, without creating
   // table reader object.

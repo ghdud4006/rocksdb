@@ -158,6 +158,8 @@ void FlushJob::RecordFlushIOStats() {
   ThreadStatusUtil::IncreaseThreadOperationProperty(
       ThreadStatus::FLUSH_BYTES_WRITTEN, IOSTATS(bytes_written));
   IOSTATS_RESET(bytes_written);
+
+  RecordTick(stats_, EXPER_FLUSH_COUNT, 1);
 }
 
 void FlushJob::PickMemTable() {

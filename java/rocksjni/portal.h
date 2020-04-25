@@ -4921,6 +4921,8 @@ class TickerTypeJni {
         return 0x7E;
       case ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_NUM_KEYS_EXPIRED:
         return 0x7F;
+      case ROCKSDB_NAMESPACE::Tickers::EXPER_FLUSH_COUNT:
+	return 0x80;
       case ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_NUM_KEYS_RELOCATED:
         return -0x02;
       case ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_BYTES_OVERWRITTEN:
@@ -5216,6 +5218,8 @@ class TickerTypeJni {
         return ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_NUM_KEYS_OVERWRITTEN;
       case 0x7F:
         return ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_NUM_KEYS_EXPIRED;
+      case 0x80:
+	return ROCKSDB_NAMESPACE::Tickers::EXPER_FLUSH_COUNT;
       case -0x02:
         return ROCKSDB_NAMESPACE::Tickers::BLOB_DB_GC_NUM_KEYS_RELOCATED;
       case -0x03:
